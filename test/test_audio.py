@@ -1,4 +1,4 @@
-import generate_test
+import utils.generate_test as generate_test
 import os 
 import argparse
 import engine
