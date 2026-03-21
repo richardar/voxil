@@ -1,0 +1,33 @@
+{
+    "model": "turbo",
+    "result": [
+        {
+            "id": 0,
+            "text": " Alright, so here we are, one of the elephants.",
+            "start": 0.0,
+            "end": 4.0,
+            "speaker": null
+        },
+        {
+            "id": 1,
+            "text": " The cool thing about these guys is that they have really, really, really long fronts.",
+            "start": 4.0,
+            "end": 12.0,
+            "speaker": null
+        },
+        {
+            "id": 2,
+            "text": " And that's cool.",
+            "start": 12.0,
+            "end": 14.0,
+            "speaker": null
+        },
+        {
+            "id": 3,
+            "text": " And that's pretty much all there is to say.",
+            "start": 16.0,
+            "end": 19.0,
+            "speaker": null
+        }
+    ]
+}

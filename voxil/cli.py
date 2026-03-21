@@ -19,7 +19,8 @@ if __name__ == "__main__" :
 
     parser.add_argument('--save_path', default="./test/")
 
+    parser.add_argument('--format', default='text', help="Data format to save the output in, Available options are 'text' and 'json' ")
     args = parser.parse_args()
     recognisor = asr.whisper_asr(args.model)
 
-    recognisor.run(input_path=args.audio_path, save=args.save ,save_path=args.save_path)
+    recognisor.run(input_path=args.audio_path, save=args.save ,save_path=args.save_path, format = args.format)
