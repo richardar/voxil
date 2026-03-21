@@ -25,7 +25,8 @@ class asr_schema:
 @dataclass
 class asr_result:
     model: str
-    result: list = field(default_factory=list)
+    text: str
+    segments: list = field(default_factory=list)
     
 
 
@@ -48,20 +49,14 @@ class whisper_asr():
         result = self.model.transcribe(input_path)
 
 
-
+        asr_result_obj = asr_result(model=self.model_name, text=result['text'])
         
-
-        asr_result_obj = asr_result(model=self.model_name)
-        
- 
 
         for i,segment in enumerate(result['segments']):
 
-
-        
             temp_asr_schema = asr_schema(id = i, text = segment['text'], start=segment['start'], end = segment['end'])
       
-            asr_result_obj.result.append(asdict(temp_asr_schema))
+            asr_result_obj.segments.append(asdict(temp_asr_schema))
 
 
         if save:
